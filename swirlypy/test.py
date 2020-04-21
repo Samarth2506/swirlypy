@@ -1,16 +1,16 @@
 from swirlytool import *
 import argparse
 
-# print("Welcome to swirlpy! What can I call you? \n")
+print("Welcome to swirlpy! What can I call you? \n")
 
-# user_name = input("Please enter your name: ")
+user_name = input("Please enter your name: ")
 
-# print("Thanks", user_name + "!", "Lets cover some basic commands in swirlpy\n")
+print("Thanks", user_name + "!", "Lets cover some basic commands in swirlpy\n")
 
-# print("Whenever you see '...', that means you should press Enter when you are ready. \n")
+print("Whenever you see '...', that means you should press Enter when you are ready. \n")
 
-# print("... <- your cue to press Enter to continue \n")
+print("... <- your cue to press Enter to continue \n")
 
-# input("")
+input("")
 
 main(parse(["run", "courses/intro"]))
