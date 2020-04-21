@@ -1,0 +1,15 @@
+- Category: printing
+  Output: "Type print('hi')"
+  Hint: "Type print('hi')"
+  Answer: print('hi')
+
+- Category: printing
+  Output: "Here we create a variable for use in subsequent questions. Set x=10"
+  Hint: "Enter x = 10"
+  Answer: x = 10
+
+# XXX. Allow entering x to be the right thing to do.
+- Category: printing
+  Output: "What is the value of x?"
+  Answer: 10
+  Hint: "Type the value of x."
