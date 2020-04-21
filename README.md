@@ -1,4 +1,4 @@
-## _Introduction_
+# Introduction
 
 * This project is an attempt to build on Swirlyy by @alexander-bauer. The goal is to develop an open source product similar to Swirl but re-written in Python. 
 
