@@ -1,4 +1,5 @@
-from swirlytool import *
+#!/usr/bin/env python3
+from swirlypy.swirlytool import *
 import argparse
 import os
 

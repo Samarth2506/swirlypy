@@ -11,12 +11,12 @@ import os
 import tarfile
 import shutil, tempfile
 
-import colors
+from swirlypy.swirlytool import *
 
 try:
     # XXX: We should be able to just import swirlypy here. We need to
     # set __all__ in the __init__.py of the main module.
-    import course
+    from swirlypy import course
 except ImportError as e:
     colors.print_err("Can't import a needed module: %s" % e)
     print("Is it installed or in your PYTHONPATH?")
@@ -135,6 +135,5 @@ def parse(args):
     test_command.set_defaults(func=test)
     return parser.parse_args(args)
 
-if __name__ == "__main__":
-    print("I am here") 
+if __name__ == "__main__": 
     sys.exit(main(parse(sys.argv[1:])))
