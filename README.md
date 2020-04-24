@@ -8,8 +8,6 @@
 
 ---
 
----
-
 # Running swirlypy 
 
 * The library is now hosted at Test Pypi. To install:
@@ -25,6 +23,11 @@
 ---
 
 ## For Developers
+
+* To make changes and package (after deleting build and dist) :
+
+python3 setup.py sdist bdist_wheel
+python3 -m twine upload --repository testpypi dist/*
 
 swirlypy is a Python package, meaning that its directory must be
 located somewhere in your Python path. For individuals with sane
