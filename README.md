@@ -8,6 +8,22 @@
 
 ---
 
+---
+
+# Running swirlypy 
+
+* The library is now hosted at Test Pypi. To install:
+
+1. Create and activate a virtual environment.
+
+2. pip install -i https://test.pypi.org/simple/ swirlypy==0.0.6
+
+3. To get around the yaml install error: pip install pyyaml and re-run the above line.
+
+4. The application will run. Need to fix bug with courses directory when packaged.
+
+---
+
 ## For Developers
 
 swirlypy is a Python package, meaning that its directory must be
