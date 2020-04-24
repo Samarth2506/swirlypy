@@ -12,6 +12,7 @@ import tarfile
 import shutil, tempfile
 
 from swirlypy.swirlytool import *
+from swirlypy import colors
 
 try:
     # XXX: We should be able to just import swirlypy here. We need to

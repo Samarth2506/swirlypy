@@ -208,7 +208,7 @@ class Course:
         """Loads a whole Course from the given course directory."""
         # Fill in a bit of metadata about the given path.
         pkgname = os.path.basename(coursedir).split(".")[0]
-        #print(coursedir)
+        # print(coursedir)
         coursedir = "../" + coursedir
         packaged = os.path.isfile(coursedir)
         #print(packaged)

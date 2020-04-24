@@ -8,7 +8,7 @@ try:
     version = subprocess.check_output(["git", "describe", "--dirty=+"],
             universal_newlines=True)
 except subprocess.CalledProcessError as e:
-    version = "0.0.6"
+    version = "0.0.8"
 print(version)
 
 setup(name='swirlypy',
@@ -20,5 +20,5 @@ setup(name='swirlypy',
         include_package_data=True,
         scripts=['swirlypy/run_swirlypy'],
         packages=['swirlypy', 'swirlypy.questions','courses'],
-        install_requires=['pyyaml>=5.3.1'],
+        install_requires=['pyyaml==5.3.1'],
         )

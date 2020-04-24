@@ -1,1 +1,1 @@
-include courses/*
+recursive-include courses *
