@@ -209,7 +209,7 @@ class Course:
         # Fill in a bit of metadata about the given path.
         pkgname = os.path.basename(coursedir).split(".")[0]
         # print(coursedir)
-        coursedir = "../" + coursedir
+        # coursedir = "../" + coursedir
         packaged = os.path.isfile(coursedir)
         #print(packaged)
         # We have to have slightly different methods of opening the

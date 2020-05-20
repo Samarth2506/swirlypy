@@ -2,6 +2,7 @@
 from swirlypy.swirlytool import *
 import argparse
 import os
+from courses import import_course_path
 
 print("Welcome to swirlpy! What can I call you? \n")
 
@@ -21,4 +22,6 @@ print("Below are the available courses you can choose from: \n")
 
 course_select = input("Select a course: ")
 
-main(parse(["run", "courses/" + course_select]))
+path = str(import_course_path.test())
+
+main(parse(["run", path + '/' + course_select]))
