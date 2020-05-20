@@ -8,7 +8,7 @@ try:
     version = subprocess.check_output(["git", "describe", "--dirty=+"],
             universal_newlines=True)
 except subprocess.CalledProcessError as e:
-    version = "0.0.8"
+    version = "0.0.9"
 print(version)
 
 setup(name='swirlypy',

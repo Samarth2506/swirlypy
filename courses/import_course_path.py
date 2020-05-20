@@ -1,6 +1,6 @@
 # import folder_trial
 
-def test():
+def get_path():
 	import pathlib
 	return pathlib.Path(__file__).parent.absolute()
 

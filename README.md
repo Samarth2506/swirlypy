@@ -16,6 +16,8 @@
 
 2. pip install -i https://test.pypi.org/simple/ swirlypy==0.0.6
 
+2*. Use this to get around pyyaml install error: pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ swirlypy==0.0.9
+
 3. To get around the yaml install error: pip install pyyaml and re-run the above line.
 
 4. The application will run. Need to fix bug with courses directory when packaged.

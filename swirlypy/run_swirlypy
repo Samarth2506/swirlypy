@@ -18,10 +18,12 @@ input("")
 
 print("Below are the available courses you can choose from: \n")
 
-# print(os.listdir("../courses"))
+path = str(import_course_path.get_path())
+
+# print(filter(os.path.isdir, os.listdir(path)))
+print(next(os.walk( os.path.join(path,'.')))[1])
+
 
 course_select = input("Select a course: ")
 
-path = str(import_course_path.test())
-
-main(parse(["run", path + '/' + course_select]))
+main(parse(["run", os.path.join(path,course_select)]))
