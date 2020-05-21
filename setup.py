@@ -20,5 +20,5 @@ setup(name='swirlypy',
         include_package_data=True,
         scripts=['swirlypy/run_swirlypy'],
         packages=['swirlypy', 'swirlypy.questions','courses'],
-        install_requires=['pyyaml==5.3.1'],
+        install_requires=['pyyaml'],
         )
