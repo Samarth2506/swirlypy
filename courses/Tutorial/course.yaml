@@ -1,6 +1,6 @@
-- Course: Random Course
-  Description: "Random Lesson"
-  Lessons: Test different lesson name
+- Course: Explore a Dataset
+  Description: "Explore a Dataset"
+  Lessons: Explore Data
   Author: Swirlypy Contributors
   Organization: Swirlypy
   Version: 0.1.0

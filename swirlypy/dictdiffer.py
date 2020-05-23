@@ -1,5 +1,7 @@
 # DictDiffer code borrowed from StackOverflow:
 # http://stackoverflow.com/a/1165552/1550074
+import pandas as pd
+import numpy as np
 class DictDiffer(object):
     """
 Calculate the difference between two dictionaries as:
@@ -17,6 +19,41 @@ Calculate the difference between two dictionaries as:
     def removed(self):
         return self.set_past - self.intersect
     def changed(self):
-        return set(o for o in self.intersect if self.old[o] != self.new[o])
+        # print(self.old)
+        # print(self.new)
+        changed = []
+        for o in self.intersect:
+            # print(o)
+            # print(self.new[o])
+            if isinstance(self.new[o], pd.DataFrame):
+                if not self.old[o].equals(self.new[o]):
+                    changed.append(o)
+            elif isinstance(self.new[o], (np.ndarray, np.generic)):
+                if not np.array_equal(self.old[o],self.new[o]):
+                    changed.append(o)
+                # changed = [o for o in self.intersect if not np.array_equal(self.old[o],self.new[o])]
+            else:
+                if self.old[o] != self.new[o]:
+                    changed.append(o)
+                # changed = [o for o in self.intersect if self.old[o] != self.new[o]]
+        return set(changed)
+        # return set(o for o in self.intersect if self.old[o] != self.new[o])
+
     def unchanged(self):
-        return set(o for o in self.intersect if self.old[o] == self.new[o])
+        unchanged = []
+        for o in self.intersect:
+            # print(o)
+            # print(self.new[o])
+            if isinstance(self.new[o], pd.DataFrame):
+                if self.old[o].equals(self.new[o]):
+                    unchanged.append(o)
+            elif isinstance(self.new[o], (np.ndarray, np.generic)):
+                if np.array_equal(self.old[o],self.new[o]):
+                    unchanged.append(o)
+                # changed = [o for o in self.intersect if not np.array_equal(self.old[o],self.new[o])]
+            else:
+                if self.old[o] != self.new[o]:
+                    unchanged.append(o)
+                # changed = [o 
+        return set(unchanged)
+        # return set(o for o in self.intersect if self.old[o] == self.new[o])

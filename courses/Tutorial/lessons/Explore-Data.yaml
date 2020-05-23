@@ -1,0 +1,7 @@
+- Category: text
+  Output: "This interactive tutorial is the first in a series based on Alan Downey's book, Think Python."
+
+- Category: command
+  Output: "Enter X.head()"
+  Answer: X.head()
+  Hint: "Type X.head() and hit the Enter key."
