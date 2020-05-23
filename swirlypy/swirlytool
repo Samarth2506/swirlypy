@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#  export PYTHONPATH=$PYTHONPATH:/Users/samarth/Desktop/Samarth/Research/swirlypy/
+#  export PYTHONPATH=/Users/samarth/Desktop/Samarth/Research/swirlypy/
 
 # swirlytool is the primary Swirlypy user interface tool, which is
 # responsible for the running, creation, and inspection of Swirlypy
@@ -52,7 +52,7 @@ def run(args):
     setColorize(args)
     # If successful, print its description and execute it.
     course.print()
-    course.execute()
+    course.execute(args.data)
 
 def info(args):
     """Print verbose information about a course, packaged or raw."""
@@ -103,9 +103,10 @@ def test(args):
     course.print()
     course.validate()
     
-def main(args):
+def main(data, args):
     # If the subcommand is known and registered, pass it the arguments
     # and let it run.
+    args.data = data
     try:
         args.func(args)
     except AttributeError as e:

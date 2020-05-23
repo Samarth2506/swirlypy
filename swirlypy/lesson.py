@@ -13,10 +13,12 @@ class Lesson:
         # Declare a new variable to use to store any data that the
         # questions pass back, as well as any passed in initially.
         data = initial_data.copy()
+        #print(data)
         for question in self.questions:
             # Execute the questions in sequence, and pass each of them
             # the current data. If they return anything new, update the
             # data with it.
+            # print(data)
             new_data = question.execute(data=data)
             if type(new_data) == dict:
                 data.update(new_data)

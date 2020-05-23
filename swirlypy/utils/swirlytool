@@ -49,7 +49,7 @@ def run(args):
     setColorize(args)
     # If successful, print its description and execute it.
     course.print()
-    course.execute()
+    course.execute(args.data)
 
 def info(args):
     """Print verbose information about a course, packaged or raw."""
@@ -100,11 +100,12 @@ def test(args):
     course.print()
     course.validate()
     
-def main(args):
+def main(data, args):
     # If the subcommand is known and registered, pass it the arguments
     # and let it run.
+    args.data = data
     try:
-        args.func(args)
+        args.func(data, args)
     except AttributeError as e:
         parser.print_usage()
 

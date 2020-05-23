@@ -110,6 +110,8 @@ class Question(object):
         # Loop until correct.
         while True:
             # Get the user's response.
+            #data.update(globals())
+            print(data)
             resp = self.get_response(data=data)
 
             # Test it. If correct (True), then break from this loop. If
@@ -258,7 +260,7 @@ class ShellQuestion(CategoryQuestion):
         # then add the given newlocals.
         ourlocals = locals.copy()
         ourlocals.update(newlocals)
-
+        print("Ourlocals: ", ourlocals)
         # Start a fresh console object. If we want to maintain state
         # between multiple shell() calls, we'll have to store the
         # locals.

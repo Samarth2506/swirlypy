@@ -20,6 +20,7 @@ class RecordingQuestion(ShellQuestion):
         aggregates any values which were computed but not assigned to
         variables.
          """
+        #print(data)
         console = self.new_console(data)
         for value in console.interact(""):
             yield value
@@ -31,15 +32,16 @@ class RecordingQuestion(ShellQuestion):
     
     def execute(self, data={}):
         self.print()
-         
         # Loop until we get the correct answer.
         while True:
             # If data does not contain a lesson state, create one
             if not "state" in data:
                 data["state"] = dict()
+
             # To avoid corruption through user errors the user should not be given 
             # direct access to the state. Hence, make a deep copy.
-            dcp = deepcopy(data["state"])
+            # dcp = deepcopy(data["state"])
+            dcp = deepcopy(data)
             # Get any values that the user generates, and pass them to
             # test_response.
             for value in self.get_response(data=dcp):

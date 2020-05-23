@@ -9,7 +9,7 @@ Syntax Trees, and comparing those directly. Thus, syntactical
 differences, such as single-quotes versus double-quotes, do not
 matter."""
     
-    _required_ = [ "answer" ]
+    _required_ = [ "answer"]
     
     def test_response(self, response, data={}):
         # We have to test their string dumps, because otherwise
