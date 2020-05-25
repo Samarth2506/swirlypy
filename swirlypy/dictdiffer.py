@@ -1,7 +1,6 @@
 # DictDiffer code borrowed from StackOverflow:
 # http://stackoverflow.com/a/1165552/1550074
-import pandas as pd
-import numpy as np
+from swirlypy import *
 class DictDiffer(object):
     """
 Calculate the difference between two dictionaries as:

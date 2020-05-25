@@ -6,6 +6,8 @@ iris = datasets.load_iris()
 X = pd.DataFrame(iris.data[:, :2])  # we only take the first two features.
 y = iris.target
 
+
+# Users creating lessons should add required variables to the data dict using get_data() function below. 
 def get_data():
     data = {}
     data['X'] = X
