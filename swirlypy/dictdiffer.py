@@ -24,7 +24,7 @@ Calculate the difference between two dictionaries as:
         for o in self.intersect:
             # print(o)
             # print(self.new[o])
-            if isinstance(self.new[o], pd.DataFrame):
+            if isinstance(self.new[o], pd.DataFrame) or isinstance(self.new[o], pd.DataFrame):
                 if not self.old[o].equals(self.new[o]):
                     changed.append(o)
             elif isinstance(self.new[o], (np.ndarray, np.generic)):
@@ -43,7 +43,7 @@ Calculate the difference between two dictionaries as:
         for o in self.intersect:
             # print(o)
             # print(self.new[o])
-            if isinstance(self.new[o], pd.DataFrame):
+            if isinstance(self.new[o], pd.DataFrame) or isinstance(self.new[o], pd.DataFrame):
                 if self.old[o].equals(self.new[o]):
                     unchanged.append(o)
             elif isinstance(self.new[o], (np.ndarray, np.generic)):

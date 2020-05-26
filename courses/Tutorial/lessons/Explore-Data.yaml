@@ -1,7 +1,25 @@
 - Category: text
-  Output: "This interactive tutorial is the first in a series based on Alan Downey's book, Think Python."
+  Output: "In this tutorial, we will explore the Iris Dataset."
 
 - Category: command
-  Output: "Enter X.head()"
-  Answer: X.head()
-  Hint: "Type X.head() and hit the Enter key."
+  Output: "The dataset has already been loaded for you. To check, we will print the first 5 rows of the dataset using the head comand. Enter iris_data.head()"
+  Answer: iris_data.head()
+  Hint: "Type iris_data.head() and hit the Enter key."
+
+- Category: text
+  Output: "Well done! As you can see, the Iris datset has 5 attributes. Let us understand the type of data loaded. In Python, you can use the type() command to get object types."
+
+# - Category: command
+#   Output: "Can you get the type of iris_data?"
+#   Answer: str(type(iris_data))
+#   Hint: "Type type(iris_data) and hit the Enter key."
+
+- Category: text
+  Output: "The fifth column, species is the target column. But, what are the classes we are predicting? To print the counts of the unique values of any column, you can use the value_counts command on Pandas Dataframes."
+
+- Category: command
+  Output: "Can you get the unique classes and their count in the species column? Try iris_data['species'].value_counts()"
+  Answer: iris_data['species'].value_counts()
+  Hint: "Type iris_data['species'].value_counts() and hit the Enter key."
+
+
