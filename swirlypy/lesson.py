@@ -5,7 +5,7 @@ class Lesson:
         self.questions = questions
         self.__dict__.update(kwargs)
 
-    def execute(self, initial_data = {}):
+    def execute(self, m,initial_data = {}):
         """Executes all questions in sequence, storing data passed back
         by each of them, and passing it into the subsequent question.
         The merged data will be passed back as a return value."""

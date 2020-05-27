@@ -111,7 +111,7 @@ class Course:
         # Return whether there were any fatal errors.
         return not errs
 
-    def execute(self, data):
+    def execute(self,m, data):
         """Repeatedly prompts the user for lessons to run until
         explictly exited."""
 
@@ -122,7 +122,7 @@ class Course:
             try:
                 colors.print_inst("Selection: ", end="")
                 identifier = input().strip()
-                self.execute_lesson(identifier, data)
+                self.execute_lesson(identifier, m,data)
             except NoSuchLessonException:
                 colors.print_err("No lesson: %s" % identifier)
             except EOFError:
@@ -132,7 +132,7 @@ class Course:
                 print("Bye!")
                 break
 
-    def execute_lesson(self, identifier, data):
+    def execute_lesson(self, identifier,m, data):
         """Executes a lesson based on a given identifier. This can be
         either an index (one-based) or a string matching a lesson name.
         If none can be found, it throws a NoSuchLessonException."""
@@ -151,7 +151,7 @@ class Course:
         initial_data["rawdir"] = self.rawdir
         initial_data["provided"] = provided
         # Execute it.
-        data = lesson.execute(initial_data)
+        data = lesson.execute(m,initial_data)
 
         # Print a seperator to show it's complete.
         print()

@@ -8,18 +8,18 @@ from swirlypy.colors import color, colorize
 import importlib
 
 def swirl():
-    # print("\n")
-    # print("| Welcome to swirlpy! What can I call you? \n", "yellow")
+    print("\n")
+    print("| Welcome to swirlpy! What can I call you? \n", "yellow")
 
-    # user_name = input("Please enter your name: ")
-    # print("\n")
-    # print("| Thanks", user_name + "!", "Lets cover some basic commands in swirlpy\n")
+    user_name = input("Please enter your name: ")
+    print("\n")
+    print("| Thanks", user_name + "!", "Lets cover some basic commands in swirlpy\n")
 
-    # print("| Whenever you see '...', that means you should press Enter when you are ready. \n")
+    print("| Whenever you see '...', that means you should press Enter when you are ready. \n")
 
-    # print("... <- your cue to press Enter to continue \n")
+    print("... <- your cue to press Enter to continue \n")
 
-    # input("")
+    input("")
 
     print("| Below are the available courses you can choose from: \n")
 
@@ -55,9 +55,9 @@ def swirl():
     #print(globals())
 
     data = m.get_data()
-    print(m.pd.DataFrame())
-    # print("| Choose from the following commands: ('run', 'info', 'create', 'test') \n")
+    # print(m.pd.DataFrame())
+    print("| Choose from the following commands: ('run', 'info', 'create', 'test') \n")
 
-    # command = input("| Enter a command for the course: ")
+    command = input("| Enter a command for the course: ")
 
-    main(data, parse(["run", os.path.join(path,course_select)]))
+    main(m, data, parse([command, os.path.join(path,course_select)]))
