@@ -9,10 +9,15 @@
 - Category: text
   Output: "Well done! As you can see, the Iris datset has 5 attributes. Let us understand the type of data loaded. In Python, you can use the type() command to get object types."
 
-# - Category: command
-#   Output: "Can you get the type of iris_data?"
-#   Answer: str(type(iris_data))
-#   Hint: "Type type(iris_data) and hit the Enter key."
+- Category: command
+  Output: "Can you get the type of iris_data?"
+  Answer: str(type(iris_data))
+  Hint: "Type type(iris_data) and hit the Enter key."
+
+- Category: command
+  Output: "Can you delete a column"
+  Answer: iris_data.drop("petal_length", axis=1, inplace=True)
+  Hint: "Type something and hit the Enter key."
 
 - Category: text
   Output: "The fifth column, species is the target column. But, what are the classes we are predicting? To print the counts of the unique values of any column, you can use the value_counts command on Pandas Dataframes."

@@ -35,8 +35,8 @@ class RecordingQuestion(ShellQuestion):
         # Loop until we get the correct answer.
         while True:
             # If data does not contain a lesson state, create one
-            if not "state" in data:
-                data["state"] = dict()
+            # if not "state" in data:
+            #     data["state"] = dict()
 
             # To avoid corruption through user errors the user should not be given 
             # direct access to the state. Hence, make a deep copy.
@@ -47,10 +47,10 @@ class RecordingQuestion(ShellQuestion):
             for value in self.get_response(data=dcp):
                 if self.test_response(value, data=dcp):
                     # Since test was passed, modify and return the data
-                    data["state"].update(value["added"])
-                    data["state"].update(value["changed"])
+                    data.update(value["added"])
+                    data.update(value["changed"])
                     for k in value["removed"]:
-                        del data["state"][k]
+                        del data[k]
                     return data
                 else:
                     try:

@@ -22,7 +22,6 @@ class Lesson:
             new_data = question.execute(data=data)
             if type(new_data) == dict:
                 data.update(new_data)
-
         # Return the data, with whatever updates have been applied.
         return data
 
