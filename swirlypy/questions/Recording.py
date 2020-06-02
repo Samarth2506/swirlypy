@@ -11,7 +11,7 @@ class RecordingQuestion(ShellQuestion):
 
     _required_ = [ ] # Required fields will depend on subclass
      
-    def get_response(self, data={}):
+    def get_response(self,data={}):
         """Interacts with the user until a valid command is entered.
         Returns a dictionary with several keys: response["ast"] is a parsed
         version of the command which was entered, keys "added", "changed", 
@@ -30,7 +30,8 @@ class RecordingQuestion(ShellQuestion):
         """When implemented, tests response in a manner appropriate
         to the subclass, returning True or False accordingly."""
     
-    def execute(self, data={}):
+    def execute(self,data={}):
+        # print("I am running")
         self.print()
         # Loop until we get the correct answer.
         while True:
@@ -41,7 +42,20 @@ class RecordingQuestion(ShellQuestion):
             # To avoid corruption through user errors the user should not be given 
             # direct access to the state. Hence, make a deep copy.
             # dcp = deepcopy(data["state"])
+            for_keeps = {}
+            for xi in data.keys():
+                if '<module' in str(data[xi]):
+                    for_keeps[xi] = data[xi]
+            
+            for xi in for_keeps.keys():
+                del data[xi]
+
             dcp = deepcopy(data)
+
+            for xi in for_keeps.keys():
+                dcp[xi] = for_keeps[xi]
+                data[xi] = for_keeps[xi]
+            # dcp = data
             # Get any values that the user generates, and pass them to
             # test_response.
             for value in self.get_response(data=dcp):
@@ -123,7 +137,23 @@ class RecordingConsole(code.InteractiveConsole):
             # Reset the value of latest_parsed.
             self.latest_parsed = None
             # Make a copy of locals
+            for_keeps = {}
+            for xi in self.locals.keys():
+                if '<module' in str(self.locals[xi]):
+                    for_keeps[xi] = self.locals[xi]
+            
+            for xi in for_keeps.keys():
+                del self.locals[xi]
+
             cpylocals = deepcopy(self.locals)
+
+            for xi in for_keeps.keys():
+                cpylocals[xi] = for_keeps[xi]
+                self.locals[xi] = for_keeps[xi]
+
+            
+           
+            # cpylocals = self.locals
             try:
                 if more:
                     prompt = sys.ps2

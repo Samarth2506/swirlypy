@@ -1,45 +1,48 @@
 - Category: text
   Output: "In this tutorial, we will explore the Iris Dataset."
 
-- Category: command
-  Output: "The dataset has already been loaded for you. To check, we will print the first 5 rows of the dataset using the head comand. Enter iris_data.head()"
-  Answer: iris_data.head()
-  Hint: "Type iris_data.head() and hit the Enter key."
+# - Category: command
+#   Output: "The dataset has already been loaded for you. To check, we will print the first 5 rows of the dataset using the head comand. Enter iris_data.head()"
+#   Answer: iris_data.head()
+#   Hint: "Type iris_data.head() and hit the Enter key."
 
-- Category: text
-  Output: "Well done! As you can see, the Iris datset has 5 attributes. Let us understand the type of data loaded. In Python, you can use the type() command to get object types."
-
-- Category: command
-  Output: "Can you get the type of iris_data?"
-  Answer: str(type(iris_data))
-  Hint: "Type type(iris_data) and hit the Enter key."
-
-- Category: command
-  Output: "Can you delete a column? Delete the 'petal_length' column in iris_data!"
-  Answer: iris_data.drop("petal_length", axis=1, inplace=True)
-  Hint: "Type something and hit the Enter key."
-
-- Category: text
-  Output: "The fifth column, species is the target column. But, what are the classes we are predicting? To print the counts of the unique values of any column, you can use the value_counts command on Pandas Dataframes."
-
-- Category: command
-  Output: "Can you get the unique classes and their count in the species column? Try iris_data['species'].value_counts()"
-  Answer: iris_data['species'].value_counts()
-  Hint: "Type iris_data['species'].value_counts() and hit the Enter key."
-
-- Category: command
-  Output: "Now we are going to try our hand at plotting! Can you store the result of last question in a variable 'plot_data'? Don't forget to convert it to a Pandas Dataframe!"
-  Answer: plot_data = iris_data['species'].value_counts()
-  Hint: "Type iris_data['species'].value_counts() and hit the Enter key."
+# - Category: text
+#   Output: "Well done! As you can see, the Iris datset has 5 attributes. Let us understand the type of data loaded. In Python, you can use the type() command to get object types."
 
 # - Category: command
-#   Output: "Please you import pandas as pd"
-#   Answer: import pandas as pd
-#   Hint: "Type import pandas as pd and hit the Enter key."
+#   Output: "Can you get the type of iris_data?"
+#   Answer: str(type(iris_data))
+#   Hint: "Type type(iris_data) and hit the Enter key."
 
 # - Category: command
-#   Output: "Nice! Enter plot_data "
-#   Answer: plot_data = pd.DataFrame(iris_data['species'].value_counts())
+#   Output: "Can you delete a column? Delete the 'petal_length' column in iris_data!"
+#   Answer: iris_data.drop("petal_length", axis=1, inplace=True)
+#   Hint: "Type something and hit the Enter key."
+
+# - Category: text
+#   Output: "The fifth column, species is the target column. But, what are the classes we are predicting? To print the counts of the unique values of any column, you can use the value_counts command on Pandas Dataframes."
+
+# - Category: command
+#   Output: "Can you get the unique classes and their count in the species column? Try iris_data['species'].value_counts()"
+#   Answer: iris_data['species'].value_counts()
 #   Hint: "Type iris_data['species'].value_counts() and hit the Enter key."
 
+# - Category: command
+#   Output: "Now we are going to try our hand at plotting! Can you store the result of last question in a variable 'plot_data'? Don't forget to convert it to a Pandas Dataframe!"
+#   Answer: m.pd.DataFrame(iris_data['species'].value_counts())
+#   Hint: "Type iris_data['species'].value_counts() and hit the Enter key."
 
+- Category: command
+  Output: "Please you import pandas as pd"
+  Answer: import pandas as pd
+  Hint: "Type import pandas as pd and hit the Enter key."
+
+- Category: command
+  Output: "Nice! Enter plot_data "
+  Answer: plot_data = pd.DataFrame(iris_data['species'].value_counts())
+  Hint: "Type iris_data['species'].value_counts() and hit the Enter key."
+
+# - Category: command
+#   Output: "Nice! Print plot_data "
+#   Answer: plot_data 
+#   Hint: "Type iris_data['species'].value_counts() and hit the Enter key."

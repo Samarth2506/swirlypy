@@ -97,14 +97,14 @@ class Question(object):
         """Test the user's response as returned by get_response,
         returning True if successful, and False if not."""
 
-    def execute(self,m, data={}):
+    def execute(self,data={}):
         """Execute the question in the default way, by first printing
         itself, then asking for a response and testing it in a loop
         until it is correct."""
         # XXX: Collect statistics here so that it can be used for
         # grading.
 
-
+        # print("I am running")
         # Print the output.
         self.print()
 
@@ -113,7 +113,7 @@ class Question(object):
             # Get the user's response.
             #data.update(globals())
             print(data)
-            resp = self.get_response(m,data=data)
+            resp = self.get_response(data=data)
 
             # Test it. If correct (True), then break from this loop. If
             # not, print the hint, if it's present.
@@ -157,7 +157,7 @@ class Question(object):
 in %s: %s" % (idx, file.name, e))
 
             questions.append(cls(method="yaml", **document))
-
+            
 
         return questions
 

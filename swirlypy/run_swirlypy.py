@@ -51,6 +51,7 @@ def swirl():
     pkg  = '.initialize_lesson'
 
     m = importlib.import_module(moduleNames+pkg)
+    print(m)
 
     #print(globals())
 

@@ -38,6 +38,7 @@ Calculate the difference between two dictionaries as:
             elif isinstance(self.old[o], dict) or isinstance(self.new[o], dict):
                 # print(self.old[o])
                 # print(self.new[o])
+                print("I am here")
                 continue
                 # diffs = DictDiffer(self.old[o], self.new[o])
                 # ad = dict()
@@ -71,6 +72,7 @@ Calculate the difference between two dictionaries as:
                     unchanged.append(o)
                 # changed = [o for o in self.intersect if not np.array_equal(self.old[o],self.new[o])]
             elif isinstance(self.old[o], dict) or isinstance(self.new[o], dict):
+                print("I am here")
                 continue
                 # diffs = DictDiffer(self.old[o], self.new[o])
                 # ad = dict()

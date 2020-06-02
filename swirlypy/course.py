@@ -146,12 +146,15 @@ class Course:
             provided = Data(os.path.join(self.rawdir, "data"))
         else:
             provided = None
+        # print(data)
+        # print(m)
+        data.update({'m' : m})
         initial_data = data
         initial_data["coursedir"] = self.coursedir
         initial_data["rawdir"] = self.rawdir
         initial_data["provided"] = provided
         # Execute it.
-        data = lesson.execute(m,initial_data)
+        data = lesson.execute(initial_data)
 
         # Print a seperator to show it's complete.
         print()
@@ -198,7 +201,6 @@ class Course:
         # Open the lesson and parse it from YAML.
         with open(lessonpath, "r") as f:
             lesson = swirlypy.lesson.Lesson.load_yaml(f)
-
         return lesson
 
     # XXX: Decide on and document the hardcoded course.yaml file here.
