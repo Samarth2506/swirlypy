@@ -42,19 +42,30 @@ class RecordingQuestion(ShellQuestion):
             # To avoid corruption through user errors the user should not be given 
             # direct access to the state. Hence, make a deep copy.
             # dcp = deepcopy(data["state"])
-            for_keeps = {}
-            for xi in data.keys():
-                if '<module' or 'AxesSubplot' in str(data[xi]):
-                    for_keeps[xi] = data[xi]
+
+
+            # for_keeps = {}
+            # for xi in data.keys():
+            #     if '<module' or 'AxesSubplot' in str(data[xi]):
+            #         for_keeps[xi] = data[xi]
             
-            for xi in for_keeps.keys():
-                del data[xi]
+            # for xi in for_keeps.keys():
+            #     del data[xi]
 
-            dcp = deepcopy(data)
+            # dcp = deepcopy(data)
 
-            for xi in for_keeps.keys():
-                dcp[xi] = for_keeps[xi]
-                data[xi] = for_keeps[xi]
+            # for xi in for_keeps.keys():
+            #     dcp[xi] = for_keeps[xi]
+            #     data[xi] = for_keeps[xi]
+            dcp = {}
+            for xi in data:
+                try:
+                    val = deepcopy(data[xi])
+                    dcp[xi] = val
+                except KeyboardInterrupt:
+                    sys.exit(0)
+                except:
+                    dcp[xi] = data[xi]
             # dcp = data
             # Get any values that the user generates, and pass them to
             # test_response.
@@ -137,19 +148,29 @@ class RecordingConsole(code.InteractiveConsole):
             # Reset the value of latest_parsed.
             self.latest_parsed = None
             # Make a copy of locals
-            for_keeps = {}
-            for xi in self.locals.keys():
-                if '<module' or 'AxesSubplot' in str(self.locals[xi]):
-                    for_keeps[xi] = self.locals[xi]
+            # for_keeps = {}
+            # for xi in self.locals.keys():
+            #     if '<module' or 'AxesSubplot' in str(self.locals[xi]):
+            #         for_keeps[xi] = self.locals[xi]
             
-            for xi in for_keeps.keys():
-                del self.locals[xi]
+            # for xi in for_keeps.keys():
+            #     del self.locals[xi]
 
-            cpylocals = deepcopy(self.locals)
+            # cpylocals = deepcopy(self.locals)
 
-            for xi in for_keeps.keys():
-                cpylocals[xi] = for_keeps[xi]
-                self.locals[xi] = for_keeps[xi]
+            # for xi in for_keeps.keys():
+            #     cpylocals[xi] = for_keeps[xi]
+            #     self.locals[xi] = for_keeps[xi]
+
+            cpylocals = {}
+            for xi in self.locals:
+                try:
+                    val = deepcopy(self.locals[xi])
+                    cpylocals[xi] = val
+                except KeyboardInterrupt:
+                    sys.exit(0)
+                except:
+                    cpylocals[xi] = self.locals[xi]
 
             
            
