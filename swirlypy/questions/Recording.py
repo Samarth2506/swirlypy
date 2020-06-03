@@ -44,7 +44,7 @@ class RecordingQuestion(ShellQuestion):
             # dcp = deepcopy(data["state"])
             for_keeps = {}
             for xi in data.keys():
-                if '<module' in str(data[xi]):
+                if '<module' or 'AxesSubplot' in str(data[xi]):
                     for_keeps[xi] = data[xi]
             
             for xi in for_keeps.keys():
@@ -139,7 +139,7 @@ class RecordingConsole(code.InteractiveConsole):
             # Make a copy of locals
             for_keeps = {}
             for xi in self.locals.keys():
-                if '<module' in str(self.locals[xi]):
+                if '<module' or 'AxesSubplot' in str(self.locals[xi]):
                     for_keeps[xi] = self.locals[xi]
             
             for xi in for_keeps.keys():
