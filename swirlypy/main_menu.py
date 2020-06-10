@@ -8,9 +8,11 @@ import swirlypy.colors as colors
 from swirlypy.colors import color, colorize
 import importlib
 
+
 def menu():
-    print("/n")
-    print("Welcome to the course menu! You have the following courses to choose from:")
+    print("\n")
+    print("Welcome to the course menu! If you like to exit to the main menu at any point, press Ctrl+D. \n")
+    print("You have the following courses to choose from: \n")
 
     path = str(import_course_path.get_path())
 
@@ -22,13 +24,19 @@ def menu():
         colors.print_option("%d: %s" % (index + 1, course))
 
     print("\n")
-    course_select = input("| Select a course: ")
+
+    try:
+        course_select = input("| --  Select a course: ")
+        print("\n")
+    except EOFError:
+        return
 
 
     try:
         course_select = int(course_select)
     except ValueError:
         pass
+  
 
     if type(course_select) == int:
         try:
@@ -46,10 +54,10 @@ def menu():
 
     data = m.get_data()
     # print(m.pd.DataFrame())
-    print("| Choose from the following commands: ('run', 'info', 'create', 'test') \n")
+    # print("| Choose from the following commands: ('run', 'info', 'create', 'test') \n")
 
-    command = input("| Enter a command for the course: ")
+    # command = input("| Enter a command for the course: ")
 
-    main(m, data, parse([command, os.path.join(path,course_select)]))
+    main(m, data, parse(["run", os.path.join(path,course_select)]))
     
     

@@ -23,12 +23,19 @@ def swirl():
     input("")
 
     while True:
-        print("Welcome to the main menu of Swirlypy! You can choose to exit the application by typing bye() or continue learning by typing continue()")
+        print("\n Welcome to the main menu of Swirlypy! You have the following options: \n")
+        print("| -- Typing learn() allows you to start a course. \n")
+        print("| -- Typing bye() causes Swirlypy to exit. \n")
+        print("| -- Typing menu() displays the main menu again. \n")
+
         user_input = input("What do you want to do? ")
         if user_input == "bye()":
-            print("Leaving Swilypy now..")
+            print("\n")
+            print("Leaving Swilypy now..Bye! \n")
             exit()
-        elif user_input == "continue()":
+        elif user_input == "learn()":
             menu()
+        elif user_input == "menu()":
+            continue
           
 
