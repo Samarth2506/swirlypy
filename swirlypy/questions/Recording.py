@@ -63,6 +63,7 @@ class RecordingQuestion(ShellQuestion):
                     val = deepcopy(data[xi])
                     dcp[xi] = val
                 except KeyboardInterrupt:
+                    print("I am called")
                     sys.exit(0)
                 except:
                     dcp[xi] = data[xi]

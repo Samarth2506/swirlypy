@@ -10,7 +10,7 @@ import importlib
 
 def swirl():
     print("\n")
-    print("| Welcome to swirlpy! What can I call you? \n", "yellow")
+    colors.print_option("| Welcome to swirlpy! What can I call you? \n")
 
     user_name = input("Please enter your name: ")
     print("\n")
@@ -28,7 +28,7 @@ def swirl():
         print("| -- Typing bye() causes Swirlypy to exit. \n")
         print("| -- Typing menu() displays the main menu again. \n")
 
-        user_input = input("What do you want to do? ")
+        user_input = input("Enter your choice:  ")
         if user_input == "bye()":
             print("\n")
             print("Leaving Swilypy now..Bye! \n")

@@ -19,6 +19,7 @@ def menu():
 
     # # print(filter(os.path.isdir, os.listdir(path)))
     courses = next(os.walk( os.path.join(path,'.')))[1]
+    courses.remove("__pycache__")
 
     for index, course in enumerate(courses):
         colors.print_option("%d: %s" % (index + 1, course))
@@ -29,6 +30,7 @@ def menu():
         course_select = input("| --  Select a course: ")
         print("\n")
     except EOFError:
+        print("Returning to the main menu.. \n")
         return
 
 

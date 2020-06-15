@@ -34,8 +34,8 @@ class color(object):
         return wrap_color
 
 def colorize(string, ansispec):
-    if not color.COLORIZE:
-        return string
+    # if not color.COLORIZE:
+    #     return string
     ansi = interpret_ansispec(ansispec)
     return "%s%s%s" % (ansi, string, ANSI.RESET)
 
