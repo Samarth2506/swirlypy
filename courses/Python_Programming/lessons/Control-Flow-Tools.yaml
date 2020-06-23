@@ -1,0 +1,40 @@
+- Category: text
+  Output: "In this lesson, we will learn about \
+    flow control statements in Python"
+
+# - Category: command
+#   Output: "Input a value of 42 for variable 'x' from the user"
+#   Answer: >
+#     x = int(input("Please enter an integer: "))
+#   Hint: "something"
+
+# - Category: command
+#   Output: "check the value for x"
+#   Answer: print(x)
+#   Hint: "something"
+
+- Category: command
+  Output: "Set x's value to 42"
+  Answer: x = 42
+  Hint: "something"
+
+- Category: text
+  Output: "Great! Next, we understand the structure\
+     of a for loop in Python. \
+    For loops have the following structure:\nif some_condition:\
+    \n  do_action1\nelse:\n  do_action2"
+
+
+- Category: command
+  Output: "Can you print 'positive' or 'negative' based on x's value?\
+    Make sure to follow the indentation in the if-loop structure!"
+  Answer: >
+    if x>0: 
+      print('positive')
+    else:
+      print('negative')
+  Hint: "something"
+
+
+
+  

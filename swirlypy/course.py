@@ -50,6 +50,7 @@ class Course:
     def menu(self):
         """Prints a menu containing all of the lessons in the course,
         along with their index."""
+        print("\nPress Ctrl+D at any point to exit to the menu.")
         for index, lesson in enumerate(self.lessonnames):
             colors.print_option("%d: %s" % (index + 1, lesson))
 
@@ -129,8 +130,8 @@ class Course:
                 # If the user hits CTRL-D, exit.
                 # XXX: Tell the user this.
                 print()
-                print("Bye!")
-                break
+                print("Returning to main menu..")
+                return
 
     def execute_lesson(self, identifier,m, data):
         """Executes a lesson based on a given identifier. This can be

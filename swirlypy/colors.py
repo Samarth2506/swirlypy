@@ -57,10 +57,10 @@ def print_inst(string, **kwargs):
     print(string, **kwargs)
 
 def print_question(string, **kwargs):
-    print(colorize(string, "bold;blue"), **kwargs)
+    print(colorize(string, "bold;yellow"), **kwargs)
 
 def print_option(string, **kwargs):
-    print(colorize(string, "magenta"), **kwargs)
+    print(colorize(string, "bold;green"), **kwargs)
 
 def print_help(string, **kwargs):
     print(colorize(string, "blue"), **kwargs)
@@ -70,3 +70,6 @@ def print_warn(string, **kwargs):
 
 def print_err(string, **kwargs):
     print(colorize("ERROR: %s" % string, "bold;red"), **kwargs)
+
+def print_exit(string, **kwargs):
+    print(colorize(string, "bold;cyan"), **kwargs)

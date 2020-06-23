@@ -11,7 +11,7 @@ import importlib
 
 def menu():
     print("\n")
-    print("Welcome to the course menu! If you like to exit to the main menu at any point, press Ctrl+D. \n")
+    print("Welcome to the course menu! If you like to exit to the main menu at any point, press Ctrl+D or enter '0'. \n")
     print("You have the following courses to choose from: \n")
 
     path = str(import_course_path.get_path())
@@ -36,15 +36,20 @@ def menu():
 
     try:
         course_select = int(course_select)
-    except ValueError:
-        pass
+    except ValueError or ModuleNotFoundError:
+        colors.print_err("No course. Returning to Course menu.. \n")
+        menu()
   
 
     if type(course_select) == int:
+        if course_select == 0:
+            print("Returning to the main menu.. \n")
+            return
         try:
             course_select = courses[course_select - 1]
-        except IndexError:
-            raise NoSuchLessonException("Invalid course index")
+        except IndexError or ModuleNotFoundError:
+            colors.print_err("No course. Returning to Course menu.. \n")
+            menu()
     
     moduleNames = 'courses.'+ str(course_select)
     pkg  = '.initialize_lesson'

@@ -24,14 +24,14 @@ def swirl():
 
     while True:
         print("\n Welcome to the main menu of Swirlypy! You have the following options: \n")
-        print("| -- Typing learn() allows you to start a course. \n")
-        print("| -- Typing bye() causes Swirlypy to exit. \n")
-        print("| -- Typing menu() displays the main menu again. \n")
+        colors.print_option("| -- Typing learn() allows you to start a course. \n")
+        colors.print_option("| -- Typing bye() causes Swirlypy to exit. \n")
+        colors.print_option("| -- Typing menu() displays the main menu again. \n")
 
         user_input = input("Enter your choice:  ")
         if user_input == "bye()":
             print("\n")
-            print("Leaving Swilypy now..Bye! \n")
+            colors.print_exit("Leaving Swilypy now..Bye! \n")
             exit()
         elif user_input == "learn()":
             menu()
