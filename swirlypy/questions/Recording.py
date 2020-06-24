@@ -71,6 +71,7 @@ class RecordingQuestion(ShellQuestion):
             # Get any values that the user generates, and pass them to
             # test_response.
             for value in self.get_response(data=dcp):
+                print('response_value:',value)
                 if self.test_response(value, data=dcp):
                     # Since test was passed, modify and return the data
                     data.update(value["added"])
@@ -127,7 +128,8 @@ class RecordingConsole(code.InteractiveConsole):
         # XXX: This is a hack to override parent precedence. This needs
         # to be fixed in a better way.
         self.compile = self.compile_ast
-         
+        old_stdout = sys.stdout
+        
         # Borrow a block of code from code.InteractiveConsole
         try:
             sys.ps1
@@ -186,9 +188,14 @@ class RecordingConsole(code.InteractiveConsole):
                     # getting "more"), then we need to ignore empty
                     # lines. However, they are valid for "more"
                     # contexts.
+                    sys.stdout = old_stdout
                     line = self.raw_input(prompt)
                     while (not more) and line == '':
                         line = self.raw_input(prompt)
+                    from io import StringIO
+                    result = StringIO()
+                    sys.stdout = result
+                    
                 except EOFError:
                     self.write("\n")
                     break
@@ -209,6 +216,14 @@ class RecordingConsole(code.InteractiveConsole):
                     # A DictDiffer object has 4 fields: added, changed,
                     # removed, unchanged, These are sets containing
                     # variable names only. Attaching values:
+                    
+                    sys.stdout = old_stdout
+                    result_string = result.getvalue()
+                    
+
+
+                    print('locals:', self.locals)
+                    print('cpylocals:', cpylocals)
                     diffs = DictDiffer(self.locals, cpylocals)
                     ad = dict()
                     for k in diffs.added() - {'__builtins__'}:
@@ -222,11 +237,13 @@ class RecordingConsole(code.InteractiveConsole):
                     # Check to see if a new value has been parsed yet.
                     # If so, yield various useful things. 
                     if self.latest_parsed != None:
+                        vals = self.locals["__swirlypy_recorder__"]
+                        vals.append(result_string.strip("\n").strip())
+
                         yield { "ast":     self.clean_parsed,
                                 "added":   ad,
                                 "changed": ch, "removed":rv,
-                                "values":  self.locals[
-                                    "__swirlypy_recorder__"],
+                                "values":  vals,
                                 "traceback": tback}
                          
             except KeyboardInterrupt:
