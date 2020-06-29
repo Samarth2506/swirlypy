@@ -19,8 +19,8 @@ then the question is marked correct."""
         # (a subclass of list).  For now, the response will be
         # considered correct if and only if some member of
         # response["values"] equals self.values.
-        print('value:', self.value)
-        print('response:',response["values"])
+        # print('value:', self.value)
+        # print('response:',response["values"])
         return self.value in response["values"]
 
     def yaml_hook(self):

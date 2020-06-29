@@ -71,7 +71,7 @@ class RecordingQuestion(ShellQuestion):
             # Get any values that the user generates, and pass them to
             # test_response.
             for value in self.get_response(data=dcp):
-                print('response_value:',value)
+                # print('response_value:',value)
                 if self.test_response(value, data=dcp):
                     # Since test was passed, modify and return the data
                     data.update(value["added"])
@@ -188,7 +188,7 @@ class RecordingConsole(code.InteractiveConsole):
                     # getting "more"), then we need to ignore empty
                     # lines. However, they are valid for "more"
                     # contexts.
-                    sys.stdout = old_stdout
+                    # sys.stdout = old_stdout
                     line = self.raw_input(prompt)
                     while (not more) and line == '':
                         line = self.raw_input(prompt)
@@ -222,8 +222,8 @@ class RecordingConsole(code.InteractiveConsole):
                     
 
 
-                    print('locals:', self.locals)
-                    print('cpylocals:', cpylocals)
+                    # print('locals:', self.locals)
+                    # print('cpylocals:', cpylocals)
                     diffs = DictDiffer(self.locals, cpylocals)
                     ad = dict()
                     for k in diffs.added() - {'__builtins__'}:
