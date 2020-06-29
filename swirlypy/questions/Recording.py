@@ -188,7 +188,7 @@ class RecordingConsole(code.InteractiveConsole):
                     # getting "more"), then we need to ignore empty
                     # lines. However, they are valid for "more"
                     # contexts.
-                    # sys.stdout = old_stdout
+                    sys.stdout = old_stdout
                     line = self.raw_input(prompt)
                     while (not more) and line == '':
                         line = self.raw_input(prompt)
@@ -219,7 +219,7 @@ class RecordingConsole(code.InteractiveConsole):
                     
                     sys.stdout = old_stdout
                     result_string = result.getvalue()
-                    
+                    print(result_string)
 
 
                     # print('locals:', self.locals)
