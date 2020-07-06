@@ -71,5 +71,8 @@ def print_warn(string, **kwargs):
 def print_err(string, **kwargs):
     print(colorize("ERROR: %s" % string, "bold;red"), **kwargs)
 
+def print_hint(string, **kwargs):
+    print(colorize("HINT: %s" % string, "bold;red"), **kwargs)
+
 def print_exit(string, **kwargs):
     print(colorize(string, "bold;cyan"), **kwargs)

@@ -159,7 +159,7 @@ class Course:
 
         # Print a seperator to show it's complete.
         print()
-        colors.print_help("Lesson complete!")
+        colors.print_exit("Lesson complete!")
 
     def load_lesson(self, identifier):
         """Loads a lesson from YAML based on a given identifier. This

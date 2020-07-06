@@ -122,7 +122,7 @@ class Question(object):
                 break
             elif testresult == False:
                 try:
-                    colors.print_help(self.hint)
+                    colors.print_err(self.hint)
                 except AttributeError:
                     pass
             else:

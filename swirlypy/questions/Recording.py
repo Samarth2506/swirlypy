@@ -81,7 +81,7 @@ class RecordingQuestion(ShellQuestion):
                     return data
                 else:
                     try:
-                        colors.print_help(self.hint)
+                        colors.print_hint(self.hint)
                     except AttributeError:
                         pass
                     break
