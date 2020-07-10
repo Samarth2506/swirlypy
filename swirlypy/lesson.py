@@ -1,4 +1,7 @@
 import swirlypy.question
+# from rich.progress import track
+from tqdm.auto import tqdm
+# from progressbar import ProgressBar
 
 class Lesson:
     def __init__(self, questions, **kwargs):
@@ -14,15 +17,20 @@ class Lesson:
         # questions pass back, as well as any passed in initially.
         data = initial_data.copy()
         #print(data)
-        for question in self.questions:
+        # count = 0
+        # lesson_length = len(self.questions))
+        # pbar = ProgressBar()
+        for question in tqdm(self.questions, bar_format='{l_bar}{bar:10}{r_bar}{bar:-10b}'):
             # Execute the questions in sequence, and pass each of them
             # the current data. If they return anything new, update the
             # data with it.
             # print(data)
-            # print("I am called")
+            # print("I am called")  
+            print("\n")              
             new_data = question.execute(data=data)
             if type(new_data) == dict:
                 data.update(new_data)
+            
         # Return the data, with whatever updates have been applied.
         return data
 

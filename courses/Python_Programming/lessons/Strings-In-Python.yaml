@@ -6,68 +6,68 @@
     single quotes ('...') or double quotes ("...") with the 
     same result. Lets get started!
 
-# - Category: command
-#   Output: Try your first string in Python! Print spam \
-#     eggs with single or double quotes
-#   Answer: print("spam eggs")
-#   Hint: Type 'spam eggs' at the prompt
+- Category: command
+  Output: Try your first string in Python! Print spam \
+    eggs with single or double quotes
+  Answer: print("spam eggs")
+  Hint: Type 'spam eggs' at the prompt
 
-  # For example, if you want to pass doesn't, you would
-  #   type 'doesn\'t''.
+#   For example, if you want to pass doesn't, you would
+#     type 'doesn\'t''.
 
-  # You can use the (\) operator to escape a single quote in a
-  #   string.
+#   You can use the (\) operator to escape a single quote in a
+#     string.
 
 # - Category: command
 #   Output: Can you try printing it?
 #   Answer: print("doesn\"'t")
 #   Hint: Type print('doesn\'t') at the prompt
 
-# - Category: command
-#   Output: >
-#    You can use the new line operator (\n) to tell Python to print
-#    text in a new line. Can you try printing the string, First Line
-#    and then print a string Second Line in a new line?
-#   Answer: print('First Line\nSecond Line' )
-#   Hint: >
-#     Type print('First Line.\nSecond Line') at the prompt. \
-#     Make sure to put the string in quotes to indicate a string!
+- Category: command
+  Output: >
+   You can use the new line operator (\n) to tell Python to print
+   text in a new line. Can you try printing the string, First Line
+   and then print a string Second Line in a new line?
+  Answer: print('First Line\nSecond Line' )
+  Hint: >
+    Type print('First Line.\nSecond Line') at the prompt. \
+    Make sure to put the string in quotes to indicate a string!
 
-# - Category: command
-#   Output: > 
-#     Well done! However, if you did not want the next line \
-#     character, simply preface a string by adding 'r' before the first \
-#     quote. Try printing C:\some\name
-#   Answer: print(r"C:\some\name")
-#   Hint: Type print(r"C:\some\name") at the prompt. You are almost there!
+- Category: command
+  Output: > 
+    Well done! However, if you did not want the next line \
+    character, simply preface a string by adding 'r' before the first \
+    quote. Try printing C:\some\name
+  Answer: print(r"C:\some\name")
+  Hint: Type print(r"C:\some\name") at the prompt. You are almost there!
 
-# - Category: getValue
-#   Output: >
-#     Great going! Strings can be concatenated (glued together)
-#     with the + operator, and repeated with *. For example
-#     you can pass the string 'unununium' by multiplying (*) 'un' 3
-#     times and adding 'ium' to it. Can you try this?
-#   Value: 'unununium'
-#   Hint: >
-#      "Type  3 * 'un' + 'ium' at the prompt"
+- Category: getValue
+  Output: >
+    Great going! Strings can be concatenated (glued together)
+    with the + operator, and repeated with *. For example
+    you can pass the string 'unununium' by multiplying (*) 'un' 3
+    times and adding 'ium' to it. Can you try this?
+  Value: 'unununium'
+  Hint: >
+     "Type  3 * 'un' + 'ium' at the prompt"
 
-# - Category: command
-#   Output: >
-#     And of course you can concatenate a variable and a string! To
-#     test this, can you assign the variable 'prefix' to string 'Py'?
-#   Answer: prefix = 'Py'
-#   Hint: >
-#      Type prefix = 'Py' at the prompt".
+- Category: command
+  Output: >
+    And of course you can concatenate a variable and a string! To
+    test this, can you assign the variable 'prefix' to string 'Py'?
+  Answer: prefix = 'Py'
+  Hint: >
+     Type prefix = 'Py' at the prompt".
 
 
-# - Category: command
-#   Output: >
-#     Now concantenate 'thon' to the variable prefix with the '+'
-#     operator to get the string Python. Finally assign, the output
-#     to the variable 'word'.
-#   Answer: word = prefix + 'thon'
-#   Hint: >
-#     Type word = prefix + 'thon'' at the prompt.
+- Category: command
+  Output: >
+    Now concantenate 'thon' to the variable prefix with the '+'
+    operator to get the string Python. Finally assign, the output
+    to the variable 'word'.
+  Answer: word = prefix + 'thon'
+  Hint: >
+    Type word = prefix + 'thon'' at the prompt.
 
 - Category: text
   Output: >
@@ -109,13 +109,13 @@
   Hint: Type word[0:2] at the prompt.
 
 
-- Category: getValue
-  Output: >
-    Great stuff! By now, you might have realized you can slice a
-    string in multiple ways. For example, word[4:]
-  Value: 'unununium'
-  Hint: >
-     "Type  3 * 'un' + 'ium' at the prompt"
+# - Category: getValue
+#   Output: >
+#     Great stuff! By now, you might have realized you can slice a
+#     string in multiple ways. For example, word[4:]
+#   Value: 'unununium'
+#   Hint: >
+#      "Type  3 * 'un' + 'ium' at the prompt"
 
 # - Category: text
 #   Output: "You see! Ensure new variables are defined before using them."
