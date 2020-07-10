@@ -3,89 +3,89 @@
     We are going to cover some basics of Python to get you started \
     with an informal introduction. Lets get started!"
 
-# - Category: command
-#   Output: "We will first learn to use Python as a calculator. Try \
-#     calculating 2+2 directly at the Python console"
-#   Answer: 2 + 2
-#   Hint: "Type 2+2 at the prompt"
+- Category: command
+  Output: "We will first learn to use Python as a calculator. Try \
+    calculating 2+2 directly at the Python console"
+  Answer: 2 + 2
+  Hint: "Type 2+2 at the prompt"
 
-# - Category: text
-#   Output: "Now that you know how that Python can be used as a \
-#     calculator, we will explore various division options in Python. \
-#     A quick refresher before move on. Remember that integer numbers \
-#     (such as 1) have type 'int' while ones with a fractional part \
-#     (such as 1.2) have type 'float'."
+- Category: text
+  Output: "Now that you know how that Python can be used as a \
+    calculator, we will explore various division options in Python. \
+    A quick refresher before move on. Remember that integer numbers \
+    (such as 1) have type 'int' while ones with a fractional part \
+    (such as 1.2) have type 'float'."
 
-# - Category: command
-#   Output: "The division operator '/' always returns a float. Can you divide \
-#     17 by 3 using the operator?"
-#   Answer: 17/3
-#   Hint: "Type 17/3 at the prompt"
+- Category: command
+  Output: "The division operator '/' always returns a float. Can you divide \
+    17 by 3 using the operator?"
+  Answer: 17/3
+  Hint: "Type 17/3 at the prompt"
 
-# - Category: command
-#   Output: "Nice! What if you wanted the closest integer division possible? \
-#     Then we use the '//' operator. This is also called floor division. \
-#     Can you try floor division of 17 by 3?"
-#   Answer: 17//3
-#   Hint: "Type 17//3 at the prompt. You are almost there!"
+- Category: command
+  Output: "Nice! What if you wanted the closest integer division possible? \
+    Then we use the '//' operator. This is also called floor division. \
+    Can you try floor division of 17 by 3?"
+  Answer: 17//3
+  Hint: "Type 17//3 at the prompt. You are almost there!"
 
-# - Category: command
-#   Output: "Well done! What if you were interested in the remainder \
-#     of the operation? Then we use the '%' operator! Can you get the \
-#     remainder when 17 is divided by 3?"
-#   Answer: 17%3
-#   Hint: "Type 17%3 at the prompt"
+- Category: command
+  Output: "Well done! What if you were interested in the remainder \
+    of the operation? Then we use the '%' operator! Can you get the \
+    remainder when 17 is divided by 3?"
+  Answer: 17%3
+  Hint: "Type 17%3 at the prompt"
 
-# - Category: command
-#   Output: "Great! Let's move on. To multiply numbers, we use the '*' \
-#     operator in Python. Can you multiple 5 and 3?"
-#   Answer: 5*3
-#   Hint: "Type 5*3 at the prompt"
+- Category: command
+  Output: "Great! Let's move on. To multiply numbers, we use the '*' \
+    operator in Python. Can you multiple 5 and 3?"
+  Answer: 5*3
+  Hint: "Type 5*3 at the prompt"
 
-# - Category: command
-#   Output: "Next, to calculate powers, the '**' operator is used. \
-#     Can you calculate the square of 5?"
-#   Answer: 5**2
-#   Hint: "Type 5**2 at the prompt"
+- Category: command
+  Output: "Next, to calculate powers, the '**' operator is used. \
+    Can you calculate the square of 5?"
+  Answer: 5**2
+  Hint: "Type 5**2 at the prompt"
 
-# - Category: command
-#   Output: "The equal sign is used to assign a value to a \
-#   variable. Can you assign the variable 'width' a value of 20 \
-#   using the equals sign?"
-#   Answer: width = 20
-#   Hint: "Type width = 20 at the prompt"
+- Category: command
+  Output: "The equal sign is used to assign a value to a \
+  variable. Can you assign the variable 'width' a value of 20 \
+  using the equals sign?"
+  Answer: width = 20
+  Hint: "Type width = 20 at the prompt"
 
-# - Category: command
-#   Output: "Well done! Can you assign the variable 'height' \
-#     the result of 5 multiplied by 9? "
-#   Answer: height = 5*9
-#   Hint: "Type height = 5*9 at the prompt"
+- Category: command
+  Output: "Well done! Can you assign the variable 'height' \
+    the result of 5 multiplied by 9? "
+  Answer: height = 5*9
+  Hint: "Type height = 5*9 at the prompt"
 
-# - Category: command
-#   Output: "Now that you have assigned values to 'height' and 'width', \
-#     you can use the variables directly for subsequent computations, \
-#     Can you multiple width by height?"
-#   Answer: width*height
-#   Hint: "Type width*height at the prompt"
+- Category: command
+  Output: "Now that you have assigned values to 'height' and 'width', \
+    you can use the variables directly for subsequent computations, \
+    Can you multiple width by height?"
+  Answer: width*height
+  Hint: "Type width*height at the prompt"
 
-# - Category: command
-#   Output: "Now let's use the previous result, the area for other \
-#     calculations. Notice that we have not assigned product of width \
-#     and height to a variable. In Python, the last computation is stored \
-#     the variable '_'. Can you add 5 to the area using the '_' variable?"
-#   Answer: _ + 5
-#   Hint: "Type _ + 5 at the prompt"
+- Category: command
+  Output: "Now let's use the previous result, the area for other \
+    calculations. Notice that we have not assigned product of width \
+    and height to a variable. In Python, the last computation is stored \
+    the variable '_'. Can you add 5 to the area using the '_' variable?"
+  Answer: _ + 5
+  Hint: "Type _ + 5 at the prompt"
 
-# - Category: command
-#   Output: "You can continue computing using this method! Just ensure \
-#   the variable '_' is explicitly overwritten by you. However, \
-#   if a variable is not 'defined'(assigned a value), \
-#       Python will throw an error. Try print(n)"
-#   Answer: print(n)
-#   Hint: "Type print(n) at the prompt"
+- Category: command
+  Output: "You can continue computing using this method! Just ensure \
+  the variable '_' is explicitly overwritten by you. However, \
+  if a variable is not 'defined'(assigned a value), \
+      Python will throw an error. Try print(n)"
+  Answer: print(n)
+  Hint: "Type print(n) at the prompt"
 
-# - Category: text
-#   Output: "You see! Ensure new variables are defined before using them."
+- Category: text
+  Output: "You see! Ensure new variables are defined before using them."
 
 - Category: text
   Output: "That brings us to the end of this lesson! You can continue \
