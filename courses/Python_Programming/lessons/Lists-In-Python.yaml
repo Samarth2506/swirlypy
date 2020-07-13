@@ -1,0 +1,124 @@
+- Category: text
+  Output: >
+    Welcome to the third lesson on Python programming! 
+    Python knows a number of compound data types, used to
+    group together other values. 
+    
+- Category: text
+  Output: >
+    The most versatile is the list, which can be written as a
+    list of comma-separated values (items) between square
+    brackets. Lists might contain items of different types,
+    but usually the items all have the same type.
+
+- Category: command
+  Output: Try your first list in Python! Can you create a list
+    called 'numbers' containing the integers 1,2 and 3? Remember
+    to use square brackets and separate the elements with commas.
+  Answer: numbers = [1,2,3]
+  Hint: Type numbers = [1,2,3] at the prompt
+
+- Category: command
+  Output: >
+   Well done! Lists can be indexed and sliced just like strings.
+   Can you get the first element of the numbers list? Remember,
+   indexing in Python starts with 0 and use square brackets to 
+   index.
+
+  Answer: numbers[0]
+  Hint: >
+    Type numbers[0] at the prompt
+
+- Category: getValue
+  Output: >
+    Let's give slicing a go with lists as well. Can you get the 
+    last 2 elements of numbers? You can index from the front
+    or reverse index!
+  Value: [2, 3]
+  Hint: >
+     Enter numbers[1:] or numbers[-2:] at the prompt.
+
+- Category: command
+  Output: > 
+    You can also concatenate lists to other lists using the '+'
+    operator. Can you add 4,5,6 (as a list) to the numbers list?
+  Answer: numbers + [4,5,6]
+  Hint: Type numbers + [4,5,6] at the prompt. You are almost there!
+
+- Category: command
+  Output: >
+    We have a list called 'cubes' pre-loaded for you. Can you
+    print cubes?
+  Answer: print(cubes)
+  Hint: >
+     Type print(cubes) at the prompt.
+
+- Category: text
+  Output: >
+    Did you notice something wrong in cubes? Thats right, all
+    of them are cubes of numbers except 65. Fortunately, this
+    can be fixed as lists are a mutable data structure!
+
+- Category: command
+  Output: >
+    You can change the i'th element of a list by assigning list[i]
+    to a new value. Can you change 65 to 64? It is the 4th element
+    in cubes.
+  Answer: cubes[3] = 64
+  Hint: >
+     Type cubes[3] = 64 at the prompt. Since you want to change the
+     4th element, you have to modify the 3rd index!
+
+- Category: command
+  Output: >
+    Print cubes to ensure the change is made.
+  Answer: print(cubes)
+  Hint: >
+     Type print(cubes) at the prompt.
+
+- Category: command
+  Output: >
+    Well done! You can also add new items at the end
+    of the list, by using the append() method. For example,
+    if you wanted to append 216 to cubes, you would do
+    cubes.append(216)! Can you append 216 to cubes?
+  Answer: cubes.append(216)
+  Hint: >
+    Type cubes.append(216) at the prompt.
+
+- Category: command
+  Output: >
+    Let's try one more! Can you add the cube of 7 to cubes? 
+    Remember, you can use the '**' operator for powers in Python!
+  Answer: cubes.append(7**3)
+  Hint: Type cubes.append(7**3) at the prompt.
+
+
+- Category: command
+  Output: >
+    Great! You can also slice lists in Python. You need use
+    square brackets like indices, use the first and last indices
+    needed with a colon. For example, for the first 2 elements
+    you need to do cubes[1:3]. Can you slice the 2nd, 3rd and 4th
+    elements from the cubes list? 
+  Answer: cubes[2:5]
+  Hint: Type cubes[2:5] at the prompt.
+
+- Category: command
+  Output: >
+    Well done! Finally, you can get the length of a list using the
+    len(list) function. Can you get the length of the cubes list? 
+  Answer: len(cubes)
+  Hint: Type len(cubes) at the prompt.
+
+- Category: text
+  Output: >
+    That brings us to the end of the lists in Python
+    lesson! You can continue on to the next
+    lesson in the course. Thank you!
+
+
+
+
+
+  
