@@ -1,42 +1,92 @@
 - Category: text
-  Output: "In this lesson, we will learn about \
-    flow control statements in Python"
-
-# - Category: command
-#   Output: "Input a value of 42 for variable 'x' from the user"
-#   Answer: >
-#     x = int(input("Please enter an integer: "))
-#   Hint: "something"
+  Output: >
+    In this lesson, we will learn about 
+    flow control statements in Python
 
 - Category: command
-  Output: "Set x's value to 42"
+  Output: Set x's value to 42
   Answer: x = 42
-  Hint: "Type x = 42 at the prompt"
+  Hint: Type x = 42 at the prompt
 
 - Category: command
-  Output: "check the value for x by printing x"
+  Output: check the value for x by printing x
   Answer: print(x)
   Hint: "Type print(x) at the prompt"
 
 - Category: text
   Output: "Great! Next, we understand the structure \
-    of a for loop in Python. \
-    For loops have the following structure:\nif some_condition:\
+    of an if loop in Python. \
+    If loops have the following structure:\nif some_condition:\
     \n  do_action1\nelse:\n  do_action2"
 
 - Category: GetValue
-  Output: "Can you print 'positive' or 'negative' based on x's value? \
-  Make sure to follow the indentation in the if-loop structure!"
+  Output: >
+    Can you print 'positive' or 'negative' based on x's value? 
+    Make sure to follow the indentation in the if-loop structure!
+    Remember, to execute multiple lines in Swirlypy, keep pressing
+    enter to go to the next line. Hit enter twice to submit!
   # Answer: >
   #   if x>0: 
   #     print('positive')
   #   else:
   #     print('negative')
   value: 'positive' 
-  Hint: "Try any variation of an if-loop to check x's value. Make sure \
-    to take care of the indentation with a tab as shown in the sample\
-     structure above. "
+  Hint: >
+    Try any variation of an if-loop to check x's value. Make sure
+    to take care of the indentation with a tab as shown in the sample
+    structure above. 
 
 
+- Category: text
+  Output: Great going! We will now understand the For loop in
+    Python. Python’s for statement iterates over the items of any
+    sequence (a list or a string), in the order that they
+    appear in the sequence.
 
+- Category: text
+  Output: "Great! Next, we understand the structure \
+    of a for loop in Python. \
+    For loops have the following structure:\nfor i in some_list(or string):\
+    \n  do_action1 with i"
+
+- Category: GetValue
+  Output: >
+     We have pre-loaded a list, 'words' for you.
+     If you wanted to iterate and print over every element in
+     words, you would do something like for w in words: print(w).
+     Ensure correct indentation for your answer!
+  value: "cat\nwindow\ndefenestrate"
+  Hint: "Type for w in words:\n     print(i) at the prompt"
+
+
+- Category: text
+  Output: >
+    If you do need to iterate over a sequence of numbers,
+    the built-in function range() comes in handy. It generates
+    arithmetic progressions.
+
+- Category: GetValue
+  Output: For example, if you wanted to print numbers from 0 to 4,
+    you would iterate through 'i' (or any other variable) through
+    range(5) with a foor loop. The given end point is never part
+    of the generated sequence. Can you print numbers 0 to 4 using
+    range() and a for loop?
+  value: "0\n1\n2\n3\n4"
+  Hint: "Type for i in range(5)\n print(i) at the prompt"
   
+- Category: GetValue
+  Output: It is possible to let the range start at another number,
+    or to specify a different increment. Just remember that the
+    start number is included in the sequence while the end number
+    is excluded. The increment is the the third argument in the
+    range function. Can print increments of 2 starting from 2 to 12?
+  value: "2\n4\n6\n8\n10\n12"
+  Hint: "Type for i in range(2,13,2)\n print(i) at the prompt.
+    Remember, the last number is not included so you need 13 as the
+    ending digit. Also, the third argument is 2 as you need increments
+    of 2!"
+
+- Category: text
+  Output: >
+    This brings us to the end of the lesson. You can continue on to
+    the next lessons. Thank you!

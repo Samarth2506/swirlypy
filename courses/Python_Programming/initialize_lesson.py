@@ -3,4 +3,5 @@
 def get_data():
     data = {}
     data['cubes'] = [1, 8, 27, 65, 125]
+    data['words'] = ['cat', 'window', 'defenestrate']
     return data
