@@ -1,6 +1,6 @@
 - Course: Python Programming
   Description: "Content borrowed from https://docs.python.org/3/tutorial/"
-  Lessons: Python As A Calculator;Strings in Python;Lists in Python;Python Control Flow Tools
+  Lessons: Python As A Calculator;Strings in Python;Lists in Python;Python Control Flow Tools;script lesson
   Author: Swirlypy Contributors
   Organization: Swirlypy
   Version: 0.1.0

@@ -88,7 +88,7 @@ class Question(object):
         colors.print_question(self.output)
 
     @abc.abstractmethod
-    def get_response(self,m, data={}):
+    def get_response(self, data={}):
         """Get user question response and returns it as an object that
         can be tested via test_response."""
 
@@ -112,7 +112,7 @@ class Question(object):
         while True:
             # Get the user's response.
             #data.update(globals())
-            print(data)
+            # print(data)
             resp = self.get_response(data=data)
 
             # Test it. If correct (True), then break from this loop. If
@@ -237,6 +237,8 @@ class CategoryQuestion(Question):
         method is 'yaml'. Can be overridden to implement per-question
         type corrections from YAML."""
         pass
+
+
 
 # XXX: Add a simpler way to drop out of the shell than asking the user
 # to exit.
