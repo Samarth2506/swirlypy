@@ -3,6 +3,7 @@ from swirlypy.questions.Recording import RecordingQuestion
 from courses import import_course_path
 import swirlypy.colors as colors
 from importlib import import_module
+import importlib
 
 class ScriptQuestion(RecordingQuestion):
     """Presents a list of options in random order to the user to select
@@ -10,41 +11,42 @@ a correct ansewr from."""
 
     _required_ = ['user_script', 'correct_script', 'test_cases']
 
-    # def get_response(self, data={}):
-    #     # Parse the options and shuffle them, for variety.
-    #     # Loop until the user selects the correct answer.
-    #     #Get location of scripts of interes
-
-
     def test_response(self, response, data={}):
         """Check the response in the simplest way possible."""
         import os
 
+        user_script = self.user_script
+
+        # Import user and correct scripts as Python modules
         moduleNames = 'courses'+ '.Python_Programming' + '.scripts.'
-        #user_script = importlib.import_module(moduleNames+self.user_script)
-        #print('something')
-        # correct_script = importlib.import_module(moduleNames+self.correct_script+'.'+self.correct_script)
-        # test_cases = importlib.import_module(moduleNames+self.test_cases)
-        p, m = (moduleNames+self.correct_script+'.'+self.correct_script).rsplit('.', 1)
+        user_mod, user_func = (moduleNames+self.user_script+'.'+self.user_script).rsplit('.', 1)
+        user_import = import_module(user_mod)
+        user_run = getattr(user_import, user_func)
         
-        mod = import_module(p)
-        met = getattr(mod, m)
 
-        path = os.path.join(str(import_course_path.get_path()), 'Python_Programming', 'scripts', self.user_script) 
-        print(path)
-        print(response)
-        if 'x' in response['values']:
-            print('inside loop')
-            os.system("code " + path)
+        correct_mod, correct_func = (moduleNames+self.correct_script+'.'+self.correct_script).rsplit('.', 1)
+        correct_import = import_module(correct_mod)
+        correct_run = getattr(correct_import, correct_func) 
+           
+        # Open the user script with VS Code
+        user_path = os.path.join(str(import_course_path.get_path()), 'Python_Programming', 'scripts', self.user_script+'.py') 
+        if 'open' in response['values']:
+            colors.print_exit('Opening your script now.. \n')
+            os.system("code " + user_path)
         
-        x = input("Enter done when ready to submit")
+        # Prompt needed to acknowledge user is done coding
+        x = input("Enter done when ready to submit: ")
 
-        print(met())
+        
+        # Reload module to update user response in script
+        importlib.reload(user_import)
+        importlib.reload(user_import) 
+        user_run = getattr(user_import, user_func)
+        correct_run = getattr(correct_import, correct_func) 
+        print("Output of your script: ", user_run())
+        print("Expected output: ",correct_run())
 
-        #print(correct_script())
-        print('I am here')
-        # return response == self.answer
-        return True
+        return user_run() == correct_run()
 
     # def selftest(self, on_err, on_warn):
     #     if self.answer not in self.choices:
