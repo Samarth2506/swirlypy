@@ -14,35 +14,33 @@ a correct ansewr from."""
     def test_response(self, response, data={}):
         """Check the response in the simplest way possible."""
         import os
-
-        user_script = self.user_script
-
+        course = 'Demo_Course'
         # Import user and correct scripts as Python modules
-        moduleNames = 'courses'+ '.Python_Programming' + '.scripts.'
-        user_mod, user_func = (moduleNames+self.user_script+'.'+self.user_script).rsplit('.', 1)
-        user_import = import_module(user_mod)
-        user_run = getattr(user_import, user_func)
-        
-
+        moduleNames = 'courses'+ '.' + course + '.scripts.'
+    
         correct_mod, correct_func = (moduleNames+self.correct_script+'.'+self.correct_script).rsplit('.', 1)
         correct_import = import_module(correct_mod)
         correct_run = getattr(correct_import, correct_func) 
            
         # Open the user script with VS Code
-        user_path = os.path.join(str(import_course_path.get_path()), 'Python_Programming', 'scripts', self.user_script+'.py') 
+        user_path = os.path.join(str(import_course_path.get_path()), course, 'scripts', self.user_script+'.py') 
         if 'open' in response['values']:
             colors.print_exit('Opening your script now.. \n')
             os.system("code " + user_path)
         
         # Prompt needed to acknowledge user is done coding
-        x = input("Enter done when ready to submit: ")
+        x = input("Enter done when ready to submit: \n")
 
+        #Load user script module
+        user_mod, user_func = (moduleNames+self.user_script+'.'+ self.user_script).rsplit('.', 1)
+        user_import = import_module(user_mod)
+        user_run = getattr(user_import, user_func)
         
         # Reload module to update user response in script
         importlib.reload(user_import)
-        importlib.reload(user_import) 
         user_run = getattr(user_import, user_func)
-        correct_run = getattr(correct_import, correct_func) 
+        
+        # Show user what output is expected and the output of their script
         print("Output of your script: ", user_run())
         print("Expected output: ",correct_run())
 

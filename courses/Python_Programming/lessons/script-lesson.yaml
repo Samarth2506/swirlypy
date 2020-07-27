@@ -6,6 +6,7 @@
   user_script: boring_function
   correct_script: boring_function_correct
   test_cases: custom_tests_1
+  hint: 'Something was wrong. Try again!'
     
 # - Category: text
 #   Output: >

@@ -1,0 +1,89 @@
+- Category: text
+  Output: >
+    Welcome to the first lesson in this demo course! This is
+    an example of a text question type!
+
+- Category: command
+  Output: >
+    The prompt, >>>, below indicates that you 
+    should enter a Python command. This is an example of a command
+    question. Enter print('Hello, world!').
+  Answer: print('Hello, world!')
+  Hint: Oops! Can you type print('Hello, world!') and hit the Enter key.
+
+- Category: command
+  Output: >
+    The equal sign is used to assign a value to a 
+    variable. Can you assign the variable 'width' a value of 20 
+    using the equals sign? You will see syntax like spaces and
+    single versus double quotes do not matter.
+  Answer: width = 20
+  Hint: "Type width = 20 at the prompt"
+
+- Category: command
+  Output: >
+    Anything you type is recorded by Swirlypy and can be consequetly
+    used in the next question. Since you created the variable width,
+    its available through the next questions. Can you print width?
+  Answer: print(width)
+  Hint: "Type print(width) at the prompt"
+
+
+- Category: text
+  Output: >
+    But what if you wanted a dataset for the user to practice with? You simply add it
+    to the initialize lesson script. The variables and data are then available for you
+    to create lessons and for the user to practice on! Let's see how that is done.
+
+- Category: command
+  Output: "The iris dataset has already been loaded for you. To check, we will print the first 5 rows of the dataset using the head comand. Enter iris_data.head()"
+  Answer: iris_data.head()
+  Hint: "Type iris_data.head() and hit the Enter key."
+
+- Category: command
+  Output: You can make changes to the data and these changes are also propagated through
+    the lesson. For example, can you delete a column? Delete the 'petal_length' column in iris_data!
+  Answer: iris_data.drop("petal_length", axis=1, inplace=True)
+  Hint: "Use the .drop method on the iris dataframe. Make sure to set inplace to true!"
+
+- Category: command
+  Output: Well done! Can you print the first 5 rows of iris data to confirm your changes?
+  Answer: iris_data.head()
+  Hint: "Type iris_data.head() and hit the Enter key."
+
+- Category: command
+  Output: "Nice! Can you calculate the frequency of classes using the value_counts() method? Be sure\
+    to convert it to a dataframe. Pandas was already imported as pd in initialize lesson! "
+  Answer: plot_data = m.pd.DataFrame(iris_data['species'].value_counts())
+  Hint: "Type iris_data['species'].value_counts() and hit the Enter key."
+
+- Category: command
+  Output: "You can also make explicit imports! Import pyplot from Matplotlib as plt"
+  Answer: import matplotlib.pyplot as plt
+  Hint: "Type iris_data['species'].value_counts() and hit the Enter key."
+
+- Category: command
+  Output: "Nice! Now we are doing to try our hand at plotting! Use Pandas to plot and assign the plot\
+    to the variable ax."
+  Answer: ax = plot_data[['species']].plot(kind='bar',legend=True) 
+  Hint: "Type ax = plot_data[['species']].plot(kind='bar',legend=True) and hit the Enter key."
+
+- Category: command
+  Output: "Now show the plot with plt.show()"
+  Answer: plt.show()
+  Hint: "Type plt.show() and hit the Enter key."
+
+- Category: multiplechoice
+  Output: "You can also have multiple choice questions in Swirlypy! If you wanted the\
+    output, Jinkies!, which of the following commands should you type?"
+  Choices:
+    - print('Jinkies!')
+    - print('Jinkies')
+    - print('Scooby-dooby-do, where are you?')
+    - print('If it weren't for those meddling kids!')
+  Answer: print('Jinkies!')
+  Hint: "Look for the command, print, and the word, 'Jinkies!' (with an !)"
+
+- Category: text
+  Output: "Great going! You have completed the first lesson in the demo showing some features of Swirlypy.\
+    Move on to the second lesson to tackle slightly more completed questions."
