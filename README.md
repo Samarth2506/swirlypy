@@ -1,33 +1,3 @@
-# Introduction
-
-* This project is an attempt to build on Swirlyy by @alexander-bauer. The goal is to develop an open source product similar to Swirl but re-written in Python. 
-
-* The project is mentored by Dr. Brian Caffo at the School of Public Health, JHU.
-
-- Readme needs to be updated.
-
----
-
-# Running swirlypy 
-
-* The library is now hosted at Test Pypi. To install:
-
-1. Create and activate a virtual environment.
-
-2. pip install -i https://test.pypi.org/simple/ swirlypy==0.0.6
-
-2*. Use this to get around pyyaml install error: pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ swirlypy==0.0.9
-
-3. To get around the yaml install error: pip install pyyaml and re-run the above line.
-
-4. The application will run. Need to fix bug with courses directory when packaged.
-
----
-
-## For Developers
-
-* To make changes and package (after deleting build and dist) :
-
 python3 setup.py sdist bdist_wheel
 python3 -m twine upload --repository testpypi dist/*
 
