@@ -54,21 +54,11 @@
   Hint: "Type iris_data['species'].value_counts() and hit the Enter key."
 
 - Category: command
-  Output: "Now show the the plot with plt.show()"
+  Output: "Now show the the plot with plt.show(). Close the plot \
+    window to continue the lesson."
   Answer: plt.show()
   Hint: "Type plt.show() and hit the Enter key."
 
-# - Category: command
-#   Output: "Set the variable, 'var' to true"
-#   Answer: var = True
-#   Hint: "Type var = True and hit the Enter key."
-
-# - Category: command
-#   Output: "Print 'yes' if var is true"
-#   Answer: print('yes') if var == True else print('No')
-#   Hint: "Type iris_data['species'].value_counts() and hit the Enter key."
-
-# - Category: command
-#   Output: "Print 'yes' if var is true"
-#   Answer: if var:print('yes')
-#   Hint: "Type var = True and hit the Enter key."
+- Category: text
+  Output: "Well done! That is the end of the short lesson on data \
+    lesson. Thank you!"
