@@ -1,0 +1,159 @@
+- Category: text
+  Output: >
+    Welcome to the fourth lesson on Python programming! 
+    We saw that lists and strings have many common properties,
+    such as indexing and slicing operations. They are two
+    examples of data types. In this lession, you will learn
+    about more data types in Python: 
+    Tuples, Sets and Disctionaries.
+
+- Category: command
+  Output: >
+    Let's start with tuples! A tuple, 't' has already been
+    loaded for you. Can you print t?
+  Answer: print(t)
+  Hint: Type print(t) at the prompt
+
+- Category: multiplechoice
+  Output: >
+    What is the difference you notice between a
+    list and tuple when you printed the tuple above?
+  Choices:
+    - Type of parenthesis used
+    - No difference 
+    - Acceptable data types
+  Answer: Type of parenthesis used
+  Hint: "Pay attention to the round parenthesis above versus the square bracket used in lists"
+
+- Category: text
+  Output: >
+    That's right! Lists are denoted by square brackets while
+    tuples are denoted by round parenthesis. Further, and more
+    importantly, the key difference is that lists are mutable
+    while tuples are immutable. Let us invetigate this statement
+    futher.
+
+- Category: command
+  Output: >
+    Can you try changing the first element of tuple t to the
+    number 10? Recall indexing from the lists lesson!
+  Answer: t[0] = 10
+  Hint: >
+    Access the 0th element with t[0] and assign the value 10 to it!
+
+- Category: text
+  Output: >
+    You see? As the error says, tuples are immutable and it's
+    elements cannot be modified. Consequently, tuples are
+    used in different situations and different purposes in
+    Python programming.
+
+- Category: text
+  Output: >
+    The next data type we will learn about are sets in Python.
+    A set is an unordered collection with no duplicate elements.
+    Basic uses include membership testing
+    and eliminating duplicate entries. 
+
+- Category: command
+  Output: >
+    To understand functionality of sets, we have loaded a list
+    called sample_list for you. Can you print sample_list?
+  Answer: print(sample_list)
+  Hint: Type print(sample_list) at the prompt".
+
+- Category: command
+  Output: >
+    Empty sets can be defined by using the set() function. More
+    commonly, duplicates can be removed from a list using sets.
+    Can you apply the set() function on sample_list to remove
+    duplicates?
+  Answer: set(sample_list)
+  Hint: Type print(sample_list) at the prompt".
+
+- Category: text
+  Output: >
+    Notice that duplicate elements of sample_list are removed
+    after applying the function! Please note that Set objects
+    also support mathematical operations like union,
+    intersection, difference, and symmetric difference.
+
+- Category: text
+  Output: >
+    Notice that duplicate elements of sample_list are removed
+    after applying the function! Please note that Set objects
+    also support mathematical operations like union,
+    intersection, difference, and symmetric difference.
+
+- Category: text
+  Output: >
+    Another useful data type built into Python is the dictionary.
+    It is best to think of a dictionary as a set of key: value
+    pairs, with the requirement that the keys are unique
+    (within one dictionary).
+
+- Category: text
+  Output: >
+    Placing a comma-separated list of key:value pairs within
+    the braces adds initial key:value pairs to the dictionary;
+    this is also the way dictionaries are written on output.
+    For example, a dictionary can be created by the following line: 
+    tel = {'jack': 4098, 'sape': 4139}
+
+- Category: command
+  Output: > 
+    Can you create the 'tel' dictionary described above?
+  Answer: >
+    tel = {'jack': 4098, 'sape': 4139}
+  Hint: >
+    Type tel = {'jack': 4098, 'sape': 4139} at the prompt.
+
+- Category: command
+  Output: >
+    You can also add additional key-value pairs to an existing
+    dictionary using the syntax some_dict[new_key] = new_value.
+    Can you add the key 'guido' to tel with a value of 4127?
+  Answer: tel['guido'] = 4127
+  Hint: >
+     Type tel['guido'] = 4127 at the prompt".
+
+
+- Category: command
+  Output: >
+    Nice! You can also delete a key-value pair from a dictionary 
+    using the syntax 'del some_dict[some_key]'. Can you delete
+    the key 'sape' from tel?
+  Answer: del tel['sape']
+  Hint: >
+     Type del tel['sape'] at the prompt".
+    
+- Category: command
+  Output: >
+    Now print tel to confirm the changes made to the
+    dictionary.
+  Answer: print(tel)
+  Hint: >
+     Type print(tel) at the prompt".
+
+- Category: command
+  Output: >
+    Well done! You can also check if a key exists in a dictionary
+    using the syntax 'key in some_dict'. Note the result of this
+    command is Boolean - true if key exists. Can you check if the
+    key 'guido' exists in tel? Ensure guido is tested as a string!  
+  Answer: >
+    'guido' in tel
+  Hint: >
+    Type 'guido' in tel at the prompt.
+     
+- Category: text
+  Output: "Good job. You are now caught up \
+  with the basic data structures in Python. That brings us to the \
+  end of this lesson! You can continue \
+  on to the next lesson in the course. Thank you!"
+
+
+
+
+
+  

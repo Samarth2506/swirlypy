@@ -58,13 +58,13 @@
   Hint: "Type iris_data['species'].value_counts() and hit the Enter key."
 
 - Category: command
-  Output: "You can also make explicit imports! Import pyplot from Matplotlib as plt"
+  Output: "You can also make explicit imports! Import pyplot from Matplotlib as plt."
   Answer: import matplotlib.pyplot as plt
   Hint: "Type iris_data['species'].value_counts() and hit the Enter key."
 
 - Category: command
   Output: "Nice! Now we are doing to try our hand at plotting! Use Pandas to plot and assign the plot\
-    to the variable ax."
+     to the variable ax."
   Answer: ax = plot_data[['species']].plot(kind='bar',legend=True) 
   Hint: "Type ax = plot_data[['species']].plot(kind='bar',legend=True) and hit the Enter key."
 
@@ -74,8 +74,8 @@
   Hint: "Type plt.show() and hit the Enter key."
 
 - Category: multiplechoice
-  Output: "You can also have multiple choice questions in Swirlypy! If you wanted the\
-    output, Jinkies!, which of the following commands should you type?"
+  Output: "You can also have multiple choice questions in Swirlypy! If you wanted the
+     output, Jinkies!, which of the following commands should you type?"
   Choices:
     - print('Jinkies!')
     - print('Jinkies')
@@ -86,4 +86,4 @@
 
 - Category: text
   Output: "Great going! You have completed the first lesson in the demo showing some features of Swirlypy.\
-    Move on to the second lesson to tackle slightly more completed questions."
+     Move on to the second lesson to tackle slightly more completed questions."
